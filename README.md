@@ -86,7 +86,7 @@ Below are the balanced accuracy scores, precision scores, and recall scores of a
 
 **Final Verdict**
 
-Based on the results, I would recommend utilization of the **Easy Ensemble AdaBoos Classifier algorithm**. 
+Based on the results, I would recommend utilization of the **Easy Ensemble AdaBoost Classifier algorithm**. 
 - It out-performed all of the other supervised machine learning algorithms for all metrics. 
 - It had the highest balanced accuracy score (0.93) of all of the models as well as the highest recall scores for both high-risk (0.92) and low-risk (0.94) credit card applicants. 
 
