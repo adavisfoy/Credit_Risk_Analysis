@@ -15,6 +15,8 @@ The purposes of this analysis was to evaluate the performance of 6 different mac
 ## Results: 
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models.
 
+We can evaluate a model's performance based on various metrics including balanced accuracy scores, precision scores, and recall scores. 
+
 - Measuring "Precision" (aka positive predictive value - PPV) gives us the ability to say whether or not our predicated positive observations actually were positive observations. 
   - Precision = TP / (TP + FP).   
 - Measuring "Recall" (or sensitivity) helps us evaluate whether or not we are missing out on other positive observations (e.g. false negatives). We must evaluate both true positives and false negatives. Recall is a measure of how many of our actual positives were correctly predicted. 
