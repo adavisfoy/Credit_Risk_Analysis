@@ -26,11 +26,14 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 
 We can evaluate a model's performance based on various metrics including balanced accuracy scores, precision scores, and recall scores. 
 
-- "Recall" (or sensitivity) measures how many people who actually have a condition were correctly predicted as such. This metric takes into account all positives, including both true positives and false negatives.  
+- A **Balanced Accuracy Score** is designed to evaluate imbalanced datasets, such as our credit card application data. It refers to the average of recall obtained on each class. The best value is 1 and the worst value is 0. 
+
+- **"Recall" (or sensitivity)** measures how many people who actually have a condition were correctly predicted as such. This metric takes into account all positives, including both true positives and false negatives.  
   - Recall = TP / (TP + FN) 
   - In the context of our credit risk analysis, recall evaluates both whether an applicant is a high credit risk and was predicated to be so (true positive) taking into account any false negatives (those who have high credit risk but were not identified as such). 
   - In the contact of our credit risk analysis, high recall means that among people who actual are high risk loan candidates, most of them will be identified by the model as such.
-- Measuring "Precision" (aka positive predictive value - PPV) gives us the ability to say whether or not our predicated positive observations actually were positive observations. 
+  
+- Measuring **"Precision" (aka positive predictive value - PPV)** gives us the ability to say whether or not our predicated positive observations actually were positive observations. 
 - Precision = TP / (TP + FP).   
   - In the contact of our credit risk analysis, high precision means that if an applicant was identified as high risk, there's a high likelihood that the applicant actually is high risk. Said another way: Among people who actual are high risk loan candidates, most of them will be identified by the model as such. 
 - For example, let's say that among 100 people, 50 are high risk credit applicants and 50 are not. A very aggressive machine learning algorithm labels everyone as a high risk applicant. Since everyone who actually is high risk is detected, the recall is 1.0 (100%). However, the precision is low: being identified as high risk in this case only means a 50% likelihood of actually being high risk. In other words, there are many false positives. 
@@ -73,5 +76,4 @@ We can evaluate a model's performance based on various metrics including balance
 
 
 ## Summary: 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. 
-If you do not recommend any of the models, justify your reasoning.
+Based on the results, I would recommend utilization of the **Easy Ensemble AdaBoos Classifier algorithm**. It out-performed all of the other supervised machine learning algorithms for all metrics. It had the highest balanced accuracy score (0.93) of all of the models as well as the highest recall scores for both high-risk (0.92) and low-risk (0.94) credit card applicants. This model would do the best job identifying high risk credit card applicants, while minimizing the number of applicants wrongly identified as high risk (false positives). 
