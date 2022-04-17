@@ -19,8 +19,9 @@ We can evaluate a model's performance based on various metrics including balance
 
 - Measuring "Precision" (aka positive predictive value - PPV) gives us the ability to say whether or not our predicated positive observations actually were positive observations. 
   - Precision = TP / (TP + FP).   
-- Measuring "Recall" (or sensitivity) helps us evaluate whether or not we are missing out on other positive observations (e.g. false negatives). We must evaluate both true positives and false negatives. Recall is a measure of how many of our actual positives were correctly predicted. 
+- Measuring "Recall" (or sensitivity) helps us evaluate whether or not we are missing out on other positive observations (e.g. false negatives). We must evaluate both true positives and false negatives. 
   - Recall = TP / (TP + FN) 
+  - In the context of our credit risk analysis, recall evaluates both true positives (i.e. whether or not a person has a high credit risk and was predicated to be so) and also takes into account any false negatives (those who have high credit risk but were not identified as such). 
 
 
 **Supervised Learning Models: Performance Summary**
