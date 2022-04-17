@@ -1,7 +1,7 @@
 # Credit Risk Analysis: Analysis of Supervised Machine Learning Models
 
 
-## Overview of the analysis: 
+## Overview of the Analysis: 
 
 The purpose of this analysis was to evaluate the performance of 6 different machine learning models for predicting credit risk. 
 
@@ -21,8 +21,7 @@ We utilized a credit card application dataset from LendingClub, a peer-to-peer l
 We then evaluated the performance of these models to determine whether or not any of them would be suitable for predicting credit risk. 
 
 
-## Results: 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models.
+## Overview of Machine Learning Performance Metrics: 
 
 We can evaluate a model's performance based on various metrics including balanced accuracy scores, precision scores, and recall scores. 
 
@@ -38,12 +37,12 @@ We can evaluate a model's performance based on various metrics including balance
   - In the contact of our credit risk analysis, high precision means that if an applicant was identified as high risk, there's a high likelihood that the applicant actually is high risk. Said another way: Among people who actual are high risk loan candidates, most of them will be identified by the model as such. 
 - For example, let's say that among 100 people, 50 are high risk credit applicants and 50 are not. A very aggressive machine learning algorithm labels everyone as a high risk applicant. Since everyone who actually is high risk is detected, the recall is 1.0 (100%). However, the precision is low: being identified as high risk in this case only means a 50% likelihood of actually being high risk. In other words, there are many false positives. 
 - Since there is a tradeoff between precision and sensitivity, we must determine which is more important for our particular use case: high precision or high recall. 
-  - In the context of our credit risk analysis, high recall seems more important since it is better to detect all high risk credit applicants, even if there might be some false positives. It would be very costly if we missed these applicants and may be worth lenders' time to pursue further analysis to confirm or rule out false-positive high risk applicants.  
+  - In the context of our credit risk analysis, high recall seems more important since it is better to detect all high risk credit applicants, even if there might be some false positives. It would be very costly if we missed these applicants and may be worth lenders' time to pursue further analysis to confirm or rule out false-positive high risk applicants.
 
-**Supervised Learning Models: Performance Summary**
 
-![Model_Performance_Summary.png](images/Model_Performance_Summary.png)
+## Results: 
 
+Below are the balanced accuracy scores, precision scores, and recall scores of all six machine learning models.
 
 **Naive Random Oversampling**
 
@@ -75,5 +74,24 @@ We can evaluate a model's performance based on various metrics including balance
 ![Easy_Ensemble_AdaBoost_Classifier.png](images/Easy_Ensemble_AdaBoost_Classifier.png)
 
 
-## Summary: 
-Based on the results, I would recommend utilization of the **Easy Ensemble AdaBoos Classifier algorithm**. It out-performed all of the other supervised machine learning algorithms for all metrics. It had the highest balanced accuracy score (0.93) of all of the models as well as the highest recall scores for both high-risk (0.92) and low-risk (0.94) credit card applicants. This model would do the best job identifying high risk credit card applicants, while minimizing the number of applicants wrongly identified as high risk (false positives). 
+## Summary:
+
+**Supervised Learning Models: Performance Summary**
+
+![Model_Performance_Summary.png](images/Model_Performance_Summary.png)
+
+- Based on the balanced accuracy scores and recall scores (high-risk), the SMOTE Oversampling and Cluster Centroids undersampling performed the worse of all of the algorithms.
+- Of the two oversampling methods, the Naive Random Oversampling performed better than SMOTE oversampling, and ranked 3rd as far as predicting high risk credit applicants based on the recall score. 
+- The combinatorial SMOTEENN algorithm that utilized both over- and under- sampling techniques fared quite well with the 3rd highest balanced accuracy score as well as the 2nd highest recall score for high risk applicants.  
+
+**Final Verdict**
+
+Based on the results, I would recommend utilization of the **Easy Ensemble AdaBoos Classifier algorithm**. 
+- It out-performed all of the other supervised machine learning algorithms for all metrics. 
+- It had the highest balanced accuracy score (0.93) of all of the models as well as the highest recall scores for both high-risk (0.92) and low-risk (0.94) credit card applicants. 
+
+I suppose it is not surprising that this model outperformed the others based on the knowledge that ensemble learning models combine multiple models to improve the accuracy, while decreasing the variance, of the model. 
+- Review of the EasyEnsembleClassifier documentation reveals that this model utilizes the technique of boosting as well as random under-sampling to balance the samples/classifications. 
+- Unlike bagging where multiple weak learners are combined at the same time to arrived at a combined result, boosting involves utilizing the weak learners sequentially so they learn from the mistakes of the previous model to become a strong learner. 
+
+This model would do the best job identifying high risk credit card applicants, while minimizing the number of applicants wrongly identified as high risk (false positives). 
