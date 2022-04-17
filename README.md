@@ -15,8 +15,10 @@ The purposes of this analysis was to evaluate the performance of 6 different mac
 ## Results: 
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models.
 
-Measuring "Precision" gives us the ability to say whether or not our predicated positive observations actually were positive observations. Precision takes into account both testing and training data (???).  
-Measuring "Recall" helps us evaluate whether or not we are missing out on other positive observations (e.g. false negatives). Recall only takes into account our predicated values (???). 
+- Measuring "Precision" (aka positive predictive value - PPV) gives us the ability to say whether or not our predicated positive observations actually were positive observations. 
+  - Precision = TP / (TP + FP).   
+- Measuring "Recall" (or sensitivity) helps us evaluate whether or not we are missing out on other positive observations (e.g. false negatives). We must evaluate both true positives and false negatives. Recall is a measure of how many of our actual positives were correctly predicted. 
+  - Recall = TP / (TP + FN) 
 
 
 **Supervised Learning Models: Performance Summary**
