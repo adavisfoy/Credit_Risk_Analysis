@@ -2,14 +2,23 @@
 
 
 ## Overview of the analysis: 
-The purposes of this analysis was to evaluate the performance of 6 different machine learning models for predicting credit risk. The models we evaluated included two oversampling algorithms, one undersampling algorithm, one combination over-and-undersampling algorithm, and two Ensemble algorithms as follows:  
 
-1. Naive Random Oversampling
-2. SMOTE Oversampling
-3. Cluster Centroids Undersampling
-4. SMOTTEENN Over- and Under-Sampling
-5. Ensemble Balanced Random Forest Classification
-6. Easy Ensemble AdaBoos Classification
+The purpose of this analysis was to evaluate the performance of 6 different machine learning models for predicting credit risk. 
+
+Credit risk is an inherently unbalanced classification problem, since low-risk loans greatly outnumber risky loans. Therefore, we needed to employ different techniques to train and evaluate models with unbalanced classes utilizing the imbalanced-learn and scikit-learn libraries. 
+
+We utilized a credit card application dataset from LendingClub, a peer-to-peer lending services company, to test out different machine learning algorithms: 
+- First we oversampled the data using the following:  
+  - **Naive Random Oversampling**
+  - **SMOTE Oversampling**
+- Then we undersampled the data using the following:  
+  - **Cluster Centroids Undersampling**
+- Then, we used a **combinatorial approach** of over- and undersampling using the **SMOTEENN algorithm**. 
+- Next, we compared two new Ensemble machine learning models that reduce bias: 
+  - **Ensemble Balanced Random Forest Classification**
+  - **Easy Ensemble AdaBoos Classification** 
+
+We then evaluated the performance of these models to determine whether or not any of them would be suitable for predicting credit risk. 
 
 
 ## Results: 
